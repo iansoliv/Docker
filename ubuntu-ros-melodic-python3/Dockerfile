@@ -135,4 +135,4 @@ RUN /bin/bash -c ". ${ros_ws}/devel/setup.bash"
 #
 
 # Set the image to start opening a new bash terminal
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash", "-c"]
