@@ -104,12 +104,13 @@ RUN echo "source /opt/ros/melodic/setup.sh" >> ~/.bashrc
 
 RUN printf '\n\n Installing SimulationManager.. \n\n'
 
-#Create the <AppID> folder
-RUN mkdir -p ${pathToAppDir}
+#Create the <AppID>'s catkin workspace folder for ROS
+RUN mkdir -p ${ros_ws}
 
-#Copy the contents of the host's existing app into the container's ROS-based app.
-COPY /SimulationManager ${pathToAppDir}
-RUN chmod -R 776 ${pathToAppDir}
+# Copy the contents of the host's existing app into the container's ROS-based app.
+# Set and uncomment the following variables for the desired ROS-based application of yours.
+#COPY /SimulationManager ${pathToAppDir}
+#RUN chmod -R 776 ${pathToAppDir}
 
 # try compiling the ${ros_ws} for the usage of <AppID>
 WORKDIR ${ros_ws}
