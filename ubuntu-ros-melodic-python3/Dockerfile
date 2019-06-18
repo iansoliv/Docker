@@ -117,7 +117,7 @@ WORKDIR ${ros_ws}
 
 #Try to issue a catkin_make in the current directory
 RUN /bin/bash -c ". /opt/ros/melodic/setup.sh \
-&& catkin clean -y \
+&& catkin clean --workspace ${ros_ws} -y \
 && cd src \
 && rm CMakeLists.txt \
 && catkin_init_workspace ${ros_ws}/src\
