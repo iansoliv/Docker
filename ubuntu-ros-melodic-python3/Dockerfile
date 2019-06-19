@@ -117,9 +117,8 @@ WORKDIR ${ros_ws}
 
 #Try to issue a catkin_make in the current directory
 RUN /bin/bash -c ". /opt/ros/melodic/setup.sh \
-&& catkin clean --workspace ${ros_ws} -y \
+&& rm -rf /devel /build /logs /src/CMakeLists.txt \
 && cd src \
-&& rm CMakeLists.txt \
 && catkin_init_workspace ${ros_ws}/src\
 && cd .. \
 && catkin config -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.6m -DPYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.6m.so \
