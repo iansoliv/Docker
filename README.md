@@ -2,6 +2,9 @@
 This repository provides some valuable Dockerfiles to employ in open-source projects.
 Their corresponding docker images are available at DockerHub.
 
+Each repository has its own branch that is the one to which DockerHub refers.
+Therefore, the master branch is just a copy of all the available single repositories.
+
 ------------
 
 
