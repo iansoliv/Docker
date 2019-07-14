@@ -44,6 +44,7 @@ RUN apt-get update -y && apt-get install -y \
     libcanberra-gtk* \
     xsltproc \
     libgtest-dev \
+    iputils-ping iproute2 \
 && rm -rf /var/lib/apt/lists/* \
 && apt-get clean
 
